@@ -1,5 +1,4 @@
 ---
-layout: "page"
 title: Music
 permalink: "/Music/"
 ---
