@@ -1,0 +1,24 @@
+---
+title:  "Goggles"
+date:   2022-10-15 15:33:33 -0500
+# categories: jekyll update
+permalink: "/Goggles/"
+image: assets/Images/Goggles/goggle.jpeg
+excerpt: Minimalist Environmentally Friendly Goggles
+---
+
+# Customizable 3D Printed Goggles for a Cause
+My friend Cody is a former Big10 Champion swimmer from Seton Hall, and he has a lot of entrepreneurial ideas. One of his latest ideas was to 3D print goggles made from environmentally friendly resin which are custom fit to a user's eyes. I was very intrigued by this and decided it was worth a shot!
+
+## The Design
+We mimicked a Swedish minimalist goggle which required only plastic. I used a great free cloud-based resource [Onshape](https://www.onshape.com/en/) to come up with our preliminary design.
+
+![goggle_model](/assets/Images/Goggles/goggle_model.png)
+
+## The Print
+Cody has an [Elegoo Mars 2](https://www.elegoo.com/products/elegoo-mars-2-pro-mono-lcd-3d-printer), an SLA printer which has been well fitted to our needs thus far. In practice, we are refining the print settings for the clear green and clear resins.  The cure time for each layer and the washing/UV curing processes are all critical to the print quality and the opacity of the final product. 
+
+![printed_goggle](/assets/Images/Goggles/goggle.jpeg)
+
+## Moving Forward
+Currently this is a fun project between friends, but one day we may try to scale up the operation. Pending a software update to my laptop, we may write some Swift code which utilizes the FaceID in newer iPhones to create an STL model of people's faces. We could then use pertinant dimensions from the submitted STL files to create the customized 3D printed environmentally friendly goggles. Updates to come!

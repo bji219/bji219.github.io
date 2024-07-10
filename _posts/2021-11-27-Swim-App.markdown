@@ -1,0 +1,192 @@
+---
+title: "Pace Calculator iOS App"
+date: 2021-05-03 15:33:33 -0500
+permalink: "/Swim_App/"
+excerpt: "Programming an iOS App in Swift."
+image: /assets/Images/Phelps.jpeg
+---
+
+# Swimming Pace Calculator iOS App
+### Inspiration
+I have a friend who won the Big East swimming championship who happens to be full of ideas. One of those ideas was creating an iOS app for swimming coaches which would calculate the pace for swimming a given distance. The necessary user inputs would be:
+
+- Desired total time
+- Total distance to swim
+- What division would the pace be calculated with (25, 50, or 100 yards/meters/feet)
+
+The optional add-on would be an incorporated stopwatch, which is still in the works (see gif). 
+
+### Pace Calculator Code 
+Below are some Swift code snippets for the function which calculates the pace. Many other lines are dedicated to the graphic user interface buttons and pagination. 
+
+```swift
+// Function that calculates pace
+    func pace_calc(_ per: Double) {
+        
+        if textField1.text != ""{
+            
+            // Calculate pace
+            let text1 = textField1.text
+            let text1_num = Int(text1!)!
+            let minsec = minutes*60
+            let secc = seconds
+            let pace = ((minsec+secc)*Int(per))/(text1_num)
+            let pmin = round(Double(pace/60))
+            let psec = Double(pace%60)
+            
+            if psec == 0.0 {
+                let formatted = String(format: "%.0f:00", pmin)
+                textView.text = formatted
+                
+            } else if psec < 10 {
+                
+                let formatted = String(format: "%.0f:0%.0f", pmin, psec)
+                textView.text = formatted
+                
+            } else {
+                let formatted = String(format: "%.0f:%.0f", pmin, psec)
+                textView.text = formatted
+            }
+        } else {
+        }
+    }
+```
+
+### Stopwatch Code
+There are many [resources](https://developer.apple.com/tutorials/swiftui) online for building a simple stopwatch in Xcode/Swift. 
+
+```swift
+ @objc func timerCounter() -> Void {
+        count += 0.01
+        let elapsed = createTimeString(seconds: count)
+        elapsedTimeLabel.text = elapsed
+    }
+    
+    func createTimeString(seconds: Float) -> String {
+        
+        var elapsedTimeAsString: String {
+            return String(format: "%02d:%02d.%d%d",
+                          Int(count / 60), Int(count.truncatingRemainder(dividingBy: 60)), Int((count * 10).truncatingRemainder(dividingBy: 10)), Int((count * 100).truncatingRemainder(dividingBy: 10)))
+            
+        }
+        return elapsedTimeAsString
+    }
+```
+
+### UI Button Code
+
+```swift
+@IBAction func startButtonTapped(_ sender: UIButton) {
+        
+        timerCounting.toggle()
+        
+        if timerCounting {
+            
+            startbutt.setTitle("Stop", for: .normal)
+            startbutt.layer.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+            lapbutt.setTitle("Lap", for: .normal)
+            
+            timer = Timer.scheduledTimer(timeInterval: 0.01, target: self,
+                    selector: #selector(timerCounter), userInfo: nil, repeats: true)
+            
+        } else {
+            
+            timer.invalidate()
+            startbutt.setTitle("Start", for: .normal)
+            startbutt.layer.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+            lapbutt.setTitle("Reset", for: .normal)
+
+        }
+    }
+    
+    @IBAction func lapButtonTapped(_ sender: Any) {
+        
+        if timerCounting == false {
+            
+            //if stop is pressed change Lap to Reset
+            elapsedTimeLabel.text = "00:00.00"
+            
+            lapTimeArray.removeAll()
+            lapCountArray.removeAll()
+            lapRawArray.removeAll()
+            lapCount = 0
+            timeDiff.removeAll()
+            laptable.reloadData()
+            
+            self.count = 0
+            self.timer.invalidate()
+            
+            //Notify data change for chart
+            setData()
+        }
+        
+        else {
+            lapCount += 1
+            lapRawArray.append(count)
+            lapCountArray.append(lapCount)
+            
+            if lapCount > 1 {
+                //timeDiff = (lapRawArray[lapRawArray.count - 1] - lapRawArray[lapRawArray.count - 2])
+                timeDiff.append(lapRawArray[lapRawArray.count - 1] - lapRawArray[lapRawArray.count - 2])
+                print(timeDiff)
+                let timeDiffString = createTimeStringDiff(seconds: timeDiff.last!)
+                lapTimeArray.append(timeDiffString)
+            } else {
+                // adds the current stopwatch time to the array, reloads the table for viewing
+                lapTimeArray.append(createTimeString(seconds: count))
+                timeDiff.append(count)
+            }
+            
+            // Reload data table
+            setData()
+            laptable.reloadData()
+        }
+    }
+```
+
+### Graph Code
+However, we wanted to integrate a visual component to the stopwatch. Every time the "Lap" button was pressed, we wanted to add a data point to a graph. Ideally, a horizontal red line would represent the pace from the calculator page in the app. Each data point added to the Lap graph would therefore be above or below the line. This way, a coach could see real time how a swimmer is trending throughout the course of their race. Maybe the swimmer picks up steam as they get warmed up, or maybe they slow down near the end of the race.
+
+Thanks to Daniel Gindi's awesome [Charts](https://github.com/danielgindi/Charts) repository (and integrated with cocoapods into the swift project) we were able to create a working plot (pace-line feature still in progress).
+
+```swift
+// Make a graph of the pace
+    lazy var lineChartView: LineChartView = {
+                
+        let chartView = LineChartView()
+        chartView.backgroundColor = #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)
+        return chartView
+        
+    }()
+    
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        print(entry)
+    }
+    
+    
+    var yvalues = [ChartDataEntry]()
+    
+    func setData() {
+        
+            for i in lapCountArray_Graph {
+               // lap_entries.append(ChartDataEntry(x: Double(lapCountArray_Graph[i]), y: Double(lapRawArray_Graph[i])))
+                yvalues.append(ChartDataEntry(x: Double(lapCountArray_Graph[i]), y: Double(lapRawArray_Graph[i])))
+
+             }
+        
+        let set1 = LineChartDataSet(entries: yvalues, label: "Pace")
+        let data_set = LineChartData(dataSet: set1)
+        lineChartView.data = data_set
+        
+        lineChartView.notifyDataSetChanged() // let the chart know it's data changed
+        
+    }
+```
+
+### The App So Far
+Check out the gif below of the working app below:
+
+<img src="/assets/Video/RPReplay_Final1638339019.gif" width="250" height="auto"/>
+
+Find the full project [here](https://github.com/bji219/PaceCalc) (It is a private repository so check out the included screenshots and code snippets). 
+

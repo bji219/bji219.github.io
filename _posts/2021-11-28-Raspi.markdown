@@ -1,0 +1,66 @@
+---
+title:  "Raspberry Pi Exploration"
+date:   2021-11-01 15:33:33 -0500
+permalink: "/Raspi/"
+excerpt: "Projects with Raspberry Pi"
+image: assets/Images/raspi.png
+---
+
+# Raspberry Pi Projects
+For my birthday, I got a [Raspberry Pi model 3B+](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/). This little computer came complete with built-in wifi reciever, bluetooth, HDMI, and plenty of usb connections. The majority of the side projects that I am interested in involve some combination of hardware and software, and the Pi was the perfect tool for the job. 
+
+### Raspotify
+The primary reason I needed the Raspberry Pi was to fulfill a project idea that I had been pondering for a few months at this point. I generally enjoy listening to music while I work, whether it be through my headphones or my record player. In my work-from-home setup, my laptop is connected to two monitors at my desk. My [Sterling Audio MX8](https://sterlingaudio.net/sterling-mx8-studio-monitors/) studio monitors, which can play music from my laptop, are set up on the opposite side of the room on a different desk. There was no way for me to listen to music from my fancy speakers and work from home at the same time! 
+
+Luckily, this was where the Raspberry Pi came in. My audio setup consists of a [Focusrite Scarlett 2i2](https://focusrite.com/en/usb-audio-interface/scarlett/scarlett-2i2) audio interface which takes USB audio input from a laptop (or from musical instruments connected to the 1/4" ports) and sends the signal to the stereo MX8 monitors. I could use a laptop in place of a Raspberry Pi to send the audio signal. Thanks to dtcooper and his awesome GitHub repository [Raspotify](https://github.com/dtcooper/raspotify) I just needed to configure the settings on my Raspberry Pi correctly and implement his open source Spotify client for Raspberry Pi! 
+
+I am running Noobs on Raspberry Pi which is a Debian-based Linux operating system. Linux uses alsa to handle audio (Advanced Linux Sound Architecture). I configured the alsa.config file to use Scarlett 2i2 as the defualt audio sound card (card 2).
+
+```
+pi@raspberrypi:~/Documents $ aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: b1 [bcm2835 HDMI 1], device 0: bcm2835 HDMI 1 [bcm2835 HDMI 1]
+  Subdevices: 4/4
+  Subdevice #0: subdevice #0
+  Subdevice #1: subdevice #1
+  Subdevice #2: subdevice #2
+  Subdevice #3: subdevice #3
+card 1: Headphones [bcm2835 Headphones], device 0: bcm2835 Headphones [bcm2835 Headphones]
+  Subdevices: 4/4
+  Subdevice #0: subdevice #0
+  Subdevice #1: subdevice #1
+  Subdevice #2: subdevice #2
+  Subdevice #3: subdevice #3
+card 2: USB [Scarlett 2i2 USB], device 0: USB Audio [USB Audio]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+  ```
+  
+I changed these two lines in /usr/share/alsa/alsa.conf to set the audio interface to default when it is connected: 
+
+  ```
+defaults.ctl.card 2
+defaults.pcm.card 2
+```
+
+Now, I can use Spotify on my phone to connect with the Raspberry Pi over Bluetooth to play music over my speakers any time I want!
+
+
+### Ultrasonic Theramin Project
+I was intersted in what else the Raspberry Pi could do. After some searching on their website, I found a cool project for making an [ultrasonic theramin](https://projects.raspberrypi.org/en/projects/ultrasonic-theremin/7). I quickly realized this did not hold much musical potential, so I decided to make it better. More details on this project [here](https://bji219.github.io/UltrasonicSynth/)!
+
+### Pi-Hole DNS Sinkhole - 4/1/2022
+As I further explored the possibilities of the raspberry pi, I happened upon [Pi-Hole](https://pi-hole.net/), a DNS sinkhole that could be used as a network-wide add blocker. Like everyone else I don't like adds on my webpages or apps, so I decided to try it out!
+
+![](/assets/Images/Raspi/pihole_install.png)
+
+A link to the Github repository to install the open-source software can be found [here](https://github.com/pi-hole/pi-hole/#one-step-automated-install). 
+
+Now, my iPhone routes internet IP requests through my raspberry pi which acts as a DNS server. I also added my MacBook and my Amazon fire stick to the DNS network's clients. It works really well, however there are some exceptions (like Hulu adds, YouTube video adds, etc.). For these edge cases the pihole works intermittently. In the case of YouTube TV, the pihole slows down streaming significantly and can get annoying. 
+
+Since my raspberry pi now routes my internet traffic, it was necessary to keep it running at all times. I decided to disable the onboard LEDs of my pi so that my sleep would not be interrupted. This took a bit of searching but I was able to find the appropriate commands: 
+
+```
+# insert commands to turn off LED's here
+```
+
