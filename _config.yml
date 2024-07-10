@@ -21,7 +21,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   my past research at Lehigh University.
 twitter_username: username
 github_username: bji219
-minimal_mistakes_skin: aqua # default, "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin: dirt # default, "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 search: true
 
 # Build settings
