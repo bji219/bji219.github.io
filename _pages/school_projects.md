@@ -1,5 +1,4 @@
 ---
-layout: "page"
 title: Lehigh Projects
 permalink: "/LehighProjects/"
 ---
