@@ -5,5 +5,11 @@ main:
     url: /categories/
   - title: "Tags"
     url: /tags/
+  - title: "Research"
+    url: /Research/
+  - title: "Lehigh Projects"
+    url: /LehighProjects/
+  - title: "Music"
+    url: /Music/
   - title: "About"
     url: /about/
