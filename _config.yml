@@ -87,12 +87,14 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: double
       author_profile: true
-      read_time: true
+      read_time: false
       comments: true
       share: true
       related: true
+      show_date: true
+      
   # _pages
   - scope:
       path: "_pages"
