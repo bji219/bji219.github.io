@@ -3,7 +3,13 @@ title:  "Wireless Vinyl"
 date:   2023-03-30 15:33:33 -0500
 permalink: "/WirelessVinyl/"
 excerpt: "Hacking a low budget vinyl record player"
-image: assets/Images/WirelessVinyl/recplayer.jpg
+categories:
+  - blog
+tags:
+  - Raspi
+  - Music
+header:
+  teaser: "/assets/Images/WirelessVinyl/recplayer.jpg"
 ---
 # Wireless Vinyl Record Player
 The slogan of my maker-enterprise would propably go something like: "Brendan Inglis, making things that already exist in a more complicated way since 1996". People might say - why not just buy a bluetooth record player? Why not just use audio cables to connect the record player to the speakers? To these people I reply, "Because". 
