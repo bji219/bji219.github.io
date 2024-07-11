@@ -22,8 +22,8 @@
   <div style="display: flex; align-items: center;">
       {% if teaser %}
         <!-- Added a div to display the teaser image -->
-        <div class="archive__item-teaser" style="flex-shrink: 0; margin-right: 15px;">
-          <img src="{{ teaser | relative_url }}" alt="" style="max-width: 150px;">
+        <div class="archive__item-teaser" style="flex-shrink: 0; margin-right: 30px;">
+          <img src="{{ teaser | relative_url }}" alt="" style="width: 150px; height: 150px; object-fit: cover;">
         </div>
       {% endif %}
 
