@@ -2,8 +2,15 @@
 title:  "DIY Felt Muffler Rail"
 date:   2021-11-27 15:33:33 -0500
 permalink: "/FeltMuffler/"
-image: assets/Images/prototypemuffle.jpg
 excerpt: "A quieter solution for practicing with family around!"
+categories:
+  - Project
+tags:
+  - Piano
+  - Woodworking
+  - Music
+header:
+  teaser: "/assets/Images/prototypemuffle.jpg"
 ---
 
 # Creating a DIY Felt Muffler Rail
