@@ -4,7 +4,7 @@ date:   2024-04-21 15:33:33 -0500
 permalink: "/VigenereCipher/"
 excerpt: "62ZL.R2?VP!UTA (key: Python)"
 categories:
-  - blog
+  - Project
 tags:
   - Puzzles
   - Python
