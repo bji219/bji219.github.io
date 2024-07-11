@@ -11,8 +11,7 @@ main:
   - url: /resume/
   - title: "About"
     url: /about/
-
-#  - title: "Categories"
-#    url: /categories/
-#  - title: "Tags"
-#    url: /tags/
+  - title: "Categories"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
