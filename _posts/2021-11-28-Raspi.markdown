@@ -3,7 +3,12 @@ title:  "Raspberry Pi Exploration"
 date:   2021-11-01 15:33:33 -0500
 permalink: "/Raspi/"
 excerpt: "Projects with Raspberry Pi"
-image: assets/Images/raspi.png
+categories:
+  - Project
+tags:
+  - Raspi
+header:
+  teaser: "/assets/Images/raspi.png"
 ---
 
 # Raspberry Pi Projects
