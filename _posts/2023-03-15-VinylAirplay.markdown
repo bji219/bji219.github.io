@@ -4,7 +4,7 @@ date:   2023-03-30 15:33:33 -0500
 permalink: "/WirelessVinyl/"
 excerpt: "Hacking a low budget vinyl record player"
 categories:
-  - blog
+  - Project
 tags:
   - Raspi
   - Music
