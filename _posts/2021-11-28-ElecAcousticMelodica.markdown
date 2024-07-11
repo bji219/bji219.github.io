@@ -1,10 +1,16 @@
 ---
 title:  "Electric-Acoustic Melodica"
 date:   2022-01-04 15:33:33 -0500
-# categories: jekyll update
 permalink: "/ElectricMelodica/"
 excerpt: "A functional and fun instrument on a budget"
-image: assets/Images/Elec_Melod/quarter_inch.jpg
+categories:
+  - Project
+tags:
+  - Melodica
+  - Electronics
+  - Music
+header:
+  teaser: "/assets/Images/Elec_Melod/quarter_inch.jpg"
 ---
 
 # Constructing an Electric-Acoustic Melodica
