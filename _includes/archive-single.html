@@ -20,10 +20,10 @@
       </div>
     -->
 
-    {% if teaser %}
+    {% if post.header.teaser %}
       <!-- Added a div to display the teaser image -->
       <div class="archive__item-teaser">
-        <img src="{{ teaser | relative_url }}" alt="">
+        <img src="{{ post.header.teaser | relative_url }}" alt="">
       </div>
     {% endif %}
     
