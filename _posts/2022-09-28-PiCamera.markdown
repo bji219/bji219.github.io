@@ -1,10 +1,16 @@
 ---
 title:  "PiCamera"
 date:   2022-09-03 15:33:33 -0500
-# categories: jekyll update
 permalink: "/PiCamera/"
-image: assets/Images/PiCamera/PiCam.jpeg
 excerpt: Experimenting with Picamera and HTML
+categories:
+  - Project
+tags:
+  - Raspi
+  - Python
+  - ML
+header:
+  teaser: "/assets/Images/PiCamera/PiCam.jpeg"
 ---
 
 # PiCamera Potential
