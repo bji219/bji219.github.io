@@ -3,7 +3,13 @@ title:  "Vigenere Cipher"
 date:   2024-04-21 15:33:33 -0500
 permalink: "/VigenereCipher/"
 excerpt: "62ZL.R2?VP!UTA (key: Python)"
-teaser: "assets/Images/VigenereCipher/vigenere.png"
+categories:
+  - blog
+tags:
+  - Puzzles
+  - Python
+header:
+  teaser: "assets/Images/VigenereCipher/vigenere.png"
 ---
 
 # Background
