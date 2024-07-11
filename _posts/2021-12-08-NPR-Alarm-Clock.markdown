@@ -2,9 +2,14 @@
 title: "NPR Alarm Clock"
 date: 2020-6-15 15:33:33 -0500
 permalink: "/NPRAlarmClock/"
-image: /assets/Images/NPRLogo_CMYK.jpg 
-theme: minima
 excerpt: "Starting my day with Morning Edition"
+categories:
+  - Project
+tags:
+  - Python
+  - Selenium
+header:
+  teaser: "/assets/Images/NPRLogo_CMYK.jpg"
 ---
 
 # NPR Alarm Clock
