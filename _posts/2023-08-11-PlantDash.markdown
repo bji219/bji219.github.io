@@ -4,7 +4,7 @@ date:   2023-08-11 15:33:33 -0500
 permalink: "/PlantDashboard/"
 excerpt: "Green Thumbs Up"
 categories:
-  - blog
+  - Project
 tags:
   - Python
   - Raspi
