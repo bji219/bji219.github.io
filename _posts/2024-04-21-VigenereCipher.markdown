@@ -9,7 +9,7 @@ tags:
   - Puzzles
   - Python
 header:
-  teaser: "assets/Images/VigenereCipher/vigenere.png"
+  teaser: "/assets/Images/VigenereCipher/vigenere.png"
 ---
 
 # Background
