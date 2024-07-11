@@ -104,7 +104,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-      entries_layout: grid
 
 category_archive:
   type: liquid
