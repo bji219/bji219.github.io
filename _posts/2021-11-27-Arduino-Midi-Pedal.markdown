@@ -3,8 +3,15 @@ title: "Arduino MIDI Pedal"
 date: 2021-03-03 15:33:33 -0500
 permalink: "/ArduinoMidiPedal/"
 author: Brendan Inglis
-image: /assets/Images/midi_pedal_cropped.jpeg 
 excerpt: "Enhancing Keyboard Functionality"
+categories:
+ - Project
+tags:
+  - Electronics
+  - Arduino
+  - Music
+header:
+  teaser: "/assets/Images/midi_pedal_cropped.jpeg"
 ---
 
 # Arduino MIDI Pedal
