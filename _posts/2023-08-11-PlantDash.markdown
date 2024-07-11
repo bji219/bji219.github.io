@@ -3,7 +3,14 @@ title:  "Plant Dashboard"
 date:   2023-08-11 15:33:33 -0500
 permalink: "/PlantDashboard/"
 excerpt: "Green Thumbs Up"
-image: assets/Images/PDB/bonsai.png
+categories:
+  - blog
+tags:
+  - Python
+  - Raspi
+  - Webpage
+header:
+  teaser: "/assets/Images/PDB/bonsai.png"
 ---
 
 # Plants
