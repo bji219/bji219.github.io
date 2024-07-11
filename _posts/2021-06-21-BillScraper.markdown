@@ -1,10 +1,15 @@
 ---
 title:  "Bill Pay Web Scraper"
 date:   2021-06-21 15:33:33 -0500
-# categories: jekyll update
 permalink: "/BillScraper/"
-image: assets/Images/BillScraper/VenmoPic.jpg
 excerpt: "Making the Boring Things Fun (Like Paying Bills)."
+categories:
+ - Project
+tags:
+  - Python
+  - Venmo
+header:
+  teaser: "/assets/Images/BillScraper/VenmoPic.jpg"
 ---
 
 # Writing a Bill-Paying Web Scraper
