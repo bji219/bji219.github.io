@@ -5,10 +5,10 @@ main:
     url: /Research/
   - title: "Lehigh Projects"
     url: /LehighProjects/
-  - title: "Music"
-    url: /Music/
   - title: "Resume"
     url: /resume/
+  - title: "Music"
+    url: /Music/
   - title: "About"
     url: /about/
   - title: "Categories"
