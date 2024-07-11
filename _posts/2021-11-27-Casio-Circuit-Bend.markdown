@@ -3,7 +3,13 @@ title: "Casio Keyboard Circuit Bending"
 date: 2019-08-19 15:33:33 -0500
 permalink: "/Casio_CircuitBend/"
 excerpt: "Adding a quarter-inch output to record vintage keyboard audio."
-image: /assets/Images/circuit_close.jpg
+categories:
+ - Project
+tags:
+  - Electronics
+  - Music
+header:
+  teaser: "/assets/Images/circuit_close.jpg"
 ---
 
 # Circuit Bending a Casio PT-100 Keyboard
