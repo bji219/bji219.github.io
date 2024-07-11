@@ -1,4 +1,0 @@
----
-permalink: /resume/
-title: Resume
----
