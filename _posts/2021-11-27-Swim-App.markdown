@@ -3,7 +3,13 @@ title: "Pace Calculator iOS App"
 date: 2021-05-03 15:33:33 -0500
 permalink: "/Swim_App/"
 excerpt: "Programming an iOS App in Swift."
-image: /assets/Images/Phelps.jpeg
+categories:
+ - Project
+tags:
+  - iOS App
+  - Swift
+header:
+  teaser: "/assets/Images/Phelps.jpeg"
 ---
 
 # Swimming Pace Calculator iOS App
