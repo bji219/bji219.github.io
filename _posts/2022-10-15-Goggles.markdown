@@ -1,10 +1,15 @@
 ---
 title:  "Goggles"
 date:   2022-10-15 15:33:33 -0500
-# categories: jekyll update
 permalink: "/Goggles/"
-image: assets/Images/Goggles/goggle.jpeg
 excerpt: Minimalist Environmentally Friendly Goggles
+categories:
+  - Project
+tags:
+  - 3D Printing
+  - Swimming
+header:
+  teaser: "/assets/Images/Goggles/goggle.jpeg"
 ---
 
 # Customizable 3D Printed Goggles for a Cause
