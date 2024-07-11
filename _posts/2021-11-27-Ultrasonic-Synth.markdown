@@ -1,10 +1,17 @@
 ---
 title:  "Ultrasonic Synth"
 date:   2021-11-27 15:33:33 -0500
-# categories: jekyll update
 permalink: "/UltrasonicSynth/"
-image: assets/Images/UltSynth/accrylic_case.JPG
 excerpt: "Playing music without touching an instrument."
+categories:
+  - Project
+tags:
+  - Synth
+  - Electronics
+  - Music
+  - Raspi
+header:
+  teaser: "/assets/Images/UltSynth/accrylic_case.JPG"
 ---
 
 # Controlling A Hardware Synthesizer with an Ultrasonic Distance Sensor
