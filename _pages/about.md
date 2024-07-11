@@ -1,7 +1,6 @@
 ---
-layout: page
-title: About Me
 permalink: /about/
+title: About Me
 ---
 
 ![Headshot](/assets/Images/prof_pic_mountain.png)
