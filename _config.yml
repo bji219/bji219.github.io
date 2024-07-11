@@ -32,6 +32,7 @@ permalink: /:categories/:title/
 paginate: 7 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+enable_copy_code_button: true
 
 include:
   - _pages
@@ -62,16 +63,19 @@ author:
   avatar : "/assets/images/propic.jpg"
   bio    : "Lifelong learner interested in solving unique multi-disciplinary problems involving medical device design, image based finite element analysis, programming, & biomechanics"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://bji219.github.io"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/bji"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/binglis33"
-
+    - label: "bandcamp"
+      icon: "fa-brands fa-bandcamp"
+      url: "https://brendaninglis.bandcamp.com/"
+    - label: "Resume"
+      icon: "fa-solid fa-book"
+      url: "https://bji219.github.io/resume/"
+      
 footer:
   links:
     - label: "GitHub"
@@ -80,6 +84,9 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/binglis33"
+    - label: "bandcamp"
+      icon: "fa-brands fa-bandcamp"
+      url: "https://brendaninglis.bandcamp.com/"
 
 defaults:
   # _posts
