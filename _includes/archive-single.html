@@ -12,10 +12,21 @@
 
 <div class="{{ include.type | default: 'list' }}__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"{% if post.locale %} lang="{{ post.locale }}"{% endif %}>
+    
+    <!--
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src="{{ teaser | relative_url }}" alt="">
       </div>
+    -->
+
+    {% if teaser %}
+      <!-- Added a div to display the teaser image -->
+      <div class="archive__item-teaser">
+        <img src="{{ teaser | relative_url }}" alt="">
+      </div>
+    {% endif %}
+    
     {% endif %}
     <h2 class="archive__item-title no_toc" itemprop="headline">
       {% if post.link %}
