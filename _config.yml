@@ -59,7 +59,7 @@ plugins:
 
 author:
   name   : "Brendan Inglis"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/propic.jpg"
   bio    : "Lifelong learner interested in solving unique multi-disciplinary problems involving medical device design, image based finite element analysis, programming, & biomechanics"
   links:
     - label: "Website"
@@ -89,11 +89,11 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: false
+      read_time: true
       comments: true
       share: true
       related: true
-      show_date: true
+      show_date: false
       
   # _pages
   - scope:
