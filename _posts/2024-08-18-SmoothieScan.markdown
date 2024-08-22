@@ -24,7 +24,8 @@ The idea started to percolate...
 - Scan each recipe in the magazine
 - Use Google OCR (optical character recognition) API to scrape the text from each image
 - Use python regex interpretation to isolate useful information
-- Create a CRUD searchable database using Ruby Rails
+- Create a CRUD searchable database using Ruby Rails and upload each recipe
+- Search recipes and edit database at my convenience
 
 # Step One
 I started by scanning each page of the recipe book, and separating out each recipe into it's own image (which would help with text parsing):
