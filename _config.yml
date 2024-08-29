@@ -63,6 +63,9 @@ author:
   avatar : "/assets/images/propic.jpg"
   bio    : "Lifelong learner interested in solving unique multi-disciplinary problems involving medical device design, image based finite element analysis, programming, & biomechanics"
   links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/brendan-inglis/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/bji"
@@ -78,6 +81,9 @@ author:
       
 footer:
   links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/brendan-inglis/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/bji219"
