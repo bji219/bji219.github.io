@@ -19,7 +19,6 @@ description: >- # this means to ignore newlines until "baseurl:"
   Welcome to my (Brendan Inglis) design portfolio! This site contains blogs
   about my hands-on projects and details about
   my past research at Lehigh University.
-twitter_username: username
 github_username: bji219
 minimal_mistakes_skin: dirt # default, "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 search: true
@@ -68,7 +67,7 @@ author:
       url: "https://www.linkedin.com/in/brendan-inglis/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/bji"
+      url: "https://github.com/bji219"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/binglis33"
