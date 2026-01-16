@@ -4,7 +4,7 @@ permalink: "/LehighProjects/"
 ---
 
 # Projects at Lehigh University
-This page serves as a place holder for adding projects that I have completed or worked on during my time at Lehigh university.
+This page serves as a placeholder for adding projects that I have completed or worked on during my time at Lehigh University.
 
 ### Newton-Raphson Iteration Root Finder Art 
 #### Fall 2020 
@@ -146,7 +146,7 @@ The final result:
 
 ### Balsawood Wing Design
 #### Fall 2021
-This Fall I took a class in Advanced Strength of Materials. Throughout the course we learned about calculating principle stresses and strains and transforming them in 2D & 3D, Castigliano's Energy method for solving statically indeterminate beam problems, shear flow in multi-cell thing wall beams, calculating shear centers, and more. 
+This Fall I took a class in Advanced Strength of Materials. Throughout the course we learned about calculating principle stresses and strains and transforming them in 2D & 3D, Castigliano's Energy method for solving statically indeterminate beam problems, shear flow in multi-cell thin wall beams, calculating shear centers, and more. 
 The final project for the class involved designing and building a swept-forward balsawood airfoil. First, we did a number of finite element simulations in ANSYS mechanical to numerically estimate the shear center of the airfoil. [Swept-forward wings](https://en.wikipedia.org/wiki/Forward-swept_wing) have maneuverability advantages but are more susceptible to torsional divergence (wings twisting off) which is why they are uncommon, and why knowing the shear center is important. 
 
 ![cad_wing](/assets/Images/wing_cad.png) 
@@ -157,7 +157,7 @@ After designing our wing and running the simulations, I exported the airfoil cro
 
 <img src="/assets/Images/constructedwing.JPG" width="500" height="auto"/>
 
-After the epoxy cured, it was time for the competition day. Our wing design came in second place out of 10 teams based on strength to weight ratio (our stats: weight = 28.45 grams, speed = 81.17 mph). Watch our wing meet it's match in the wind tunnel below!
+After the epoxy cured, it was time for the competition day. Our wing design came in second place out of 10 teams based on strength to weight ratio (our stats: weight = 28.45 grams, speed = 81.17 mph). Watch our wing meet its match in the wind tunnel below!
 
 <img src="/assets/Video/wind_tunnel.gif" width="500" height="auto"/>
 
